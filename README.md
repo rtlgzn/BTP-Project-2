@@ -117,7 +117,6 @@ Before accessing the system you have to:
 
 - `Log In`:  After you have registered for an account then you can login by first sending a POST request to the /login endpoint or go to  http://localhost:3000/login after starting the application. Login with the "username" and "password". The credentials you registered with. The response should give you a "jwt token" in response. Input the token value into "Auth -> Bearer Token -> set token value". Example below:
 
-  ![image](https://github.com/KabeerH/Cloud-Based-Restaurant-Reservation-System/assets/122492914/242b7315-3ad0-4918-bf33-acce235e8f1b)
   ![image](https://github.com/KabeerH/Cloud-Based-Restaurant-Reservation-System/assets/122492914/607ec6c8-b868-4081-98e6-67f34f5512ee)
 
 
@@ -185,21 +184,15 @@ This endpoint deletes a reservation from the database.
 3. change reservation id with the id you trying to delete
 4. Click on `Send` to make the request
 
-![image](https://github.com/KabeerH/Cloud-Based-Restaurant-Reservation-System/assets/122492914/cfafbc83-c32b-43af-aca4-f01fdc00ddbe)
 
 ## Security precautions made: 
 
 - User Authentication: Using JWT Token Authentication the system first verifies the identity of the user. When making any request to the system it checks the user’s credentials against the users table in the reservation_db database. This JWT token value will be random everytime to ensure timeout if the user is logged in for too long (inactive).  If the user credentials also don't match then display a error message
 
-  ![image](https://github.com/KabeerH/Cloud-Based-Restaurant-Reservation-System/assets/122492914/cd35f2f4-05fe-4810-860a-1cf4996b5b55)
 
 - Password Hashing: Whenever a new user is added to the system, their data is hashed using the bcrypt python library and salting the password before storing the data into the SQlite database, if someone gets access to the users table then the data won’t show their password but instead hashed values.
 
-  ![image](https://github.com/KabeerH/Cloud-Based-Restaurant-Reservation-System/assets/122492914/c3c84300-c0d4-4849-8872-2bbb9d2f1f1d)
 
 - Access Control: The reservations are associated with the user_id, the system will check which user_id is trying to access what data and only return the data associated with that user ensuring data security.
 
-  ## Contributors 
-
-- Kabeer Harjani | https://github.com/KabeerH
 
