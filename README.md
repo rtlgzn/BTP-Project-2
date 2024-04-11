@@ -113,11 +113,9 @@ Before accessing the system you have to:
 
 - `Register`: To start using the Restaurant Reservation system you must register for an account. To do this send a POST request to the /register endpoint or go to http://localhost:3000/register after starting the application. Register with a “username”, “password”, and "email" field. Example below: 
 
-  ![image](https://github.com/KabeerH/Cloud-Based-Restaurant-Reservation-System/assets/122492914/1d81f6c1-382e-4a65-9dd9-5180e3434f24)
 
 - `Log In`:  After you have registered for an account then you can login by first sending a POST request to the /login endpoint or go to  http://localhost:3000/login after starting the application. Login with the "username" and "password". The credentials you registered with. The response should give you a "jwt token" in response. Input the token value into "Auth -> Bearer Token -> set token value". Example below:
 
-  ![image](https://github.com/KabeerH/Cloud-Based-Restaurant-Reservation-System/assets/122492914/607ec6c8-b868-4081-98e6-67f34f5512ee)
 
 
 Now you should be able to access the following endpoints. If the Bearer Token value is incorrect then you should be returned with "Invaild token" response.
